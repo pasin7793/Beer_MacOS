@@ -10,10 +10,10 @@
 		947754242912B2C100EFE81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947754232912B2C100EFE81B /* AppDelegate.swift */; };
 		947754262912B2C100EFE81B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947754252912B2C100EFE81B /* ViewController.swift */; };
 		947754282912B2C200EFE81B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947754272912B2C200EFE81B /* Assets.xcassets */; };
-		9477542B2912B2C200EFE81B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947754292912B2C200EFE81B /* Main.storyboard */; };
 		947754362912B2C200EFE81B /* Beer_MacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947754352912B2C200EFE81B /* Beer_MacOSTests.swift */; };
 		947754402912B2C200EFE81B /* Beer_MacOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9477543F2912B2C200EFE81B /* Beer_MacOSUITests.swift */; };
 		947754422912B2C200EFE81B /* Beer_MacOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947754412912B2C200EFE81B /* Beer_MacOSUITestsLaunchTests.swift */; };
+		9477544F2912B32C00EFE81B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9477544E2912B32C00EFE81B /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +38,13 @@
 		947754232912B2C100EFE81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		947754252912B2C100EFE81B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		947754272912B2C200EFE81B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9477542A2912B2C200EFE81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9477542C2912B2C200EFE81B /* Beer_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Beer_MacOS.entitlements; sourceTree = "<group>"; };
 		947754312912B2C200EFE81B /* Beer_MacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Beer_MacOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		947754352912B2C200EFE81B /* Beer_MacOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer_MacOSTests.swift; sourceTree = "<group>"; };
 		9477543B2912B2C200EFE81B /* Beer_MacOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Beer_MacOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9477543F2912B2C200EFE81B /* Beer_MacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer_MacOSUITests.swift; sourceTree = "<group>"; };
 		947754412912B2C200EFE81B /* Beer_MacOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer_MacOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9477544E2912B32C00EFE81B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 				947754232912B2C100EFE81B /* AppDelegate.swift */,
 				947754252912B2C100EFE81B /* ViewController.swift */,
 				947754272912B2C200EFE81B /* Assets.xcassets */,
-				947754292912B2C200EFE81B /* Main.storyboard */,
 				9477542C2912B2C200EFE81B /* Beer_MacOS.entitlements */,
+				9477544E2912B32C00EFE81B /* main.swift */,
 			);
 			path = Beer_MacOS;
 			sourceTree = "<group>";
@@ -226,7 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				947754282912B2C200EFE81B /* Assets.xcassets in Resources */,
-				9477542B2912B2C200EFE81B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +252,7 @@
 			files = (
 				947754262912B2C100EFE81B /* ViewController.swift in Sources */,
 				947754242912B2C100EFE81B /* AppDelegate.swift in Sources */,
+				9477544F2912B32C00EFE81B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,17 +287,6 @@
 			targetProxy = 9477543C2912B2C200EFE81B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		947754292912B2C200EFE81B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9477542A2912B2C200EFE81B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		947754432912B2C200EFE81B /* Debug */ = {
@@ -423,8 +412,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,8 +438,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
