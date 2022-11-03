@@ -11,14 +11,14 @@ import Then
 
 class ViewController: NSViewController {
 
-    let beerTextView = NSTextView(frame: .zero).then{
+    private let beerTextView = NSTextView(frame: .zero).then{
         $0.alignment = .center
         $0.drawsBackground = false
         $0.isEditable = false
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    let service = WebService()
+    private let service = WebService()
     
     func addView(){
         view.addSubview(beerTextView)
@@ -41,17 +41,15 @@ class ViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        Task{
-            loadBeer()
-        }
+        service.fetchData()
+        loadBeer()
     }
 
     override func loadView() {
         self.view = NSView(frame: NSRect(x: 0, y: 0, width: 400, height: 200))
     }
     
-    private func loadBeer(){
-        WebService().fetchData()
+    private func loadBeer() {
         service.beer.bind { [weak self] beer in
             guard let beer = beer else {return}
             DispatchQueue.main.async {
