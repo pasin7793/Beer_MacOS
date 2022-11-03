@@ -51,8 +51,12 @@ class ViewController: NSViewController {
     }
     
     private func loadBeer(){
-        service.beer.bind { beer in
-            self.beerTextView.string = beer?.description ?? ""
+        WebService().fetchData()
+        service.beer.bind { [weak self] beer in
+            guard let beer = beer else {return}
+            DispatchQueue.main.async {
+                self?.beerTextView.string = beer.description
+            }
         }
     }
     
