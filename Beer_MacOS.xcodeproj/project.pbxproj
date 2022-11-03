@@ -17,6 +17,9 @@
 		947754512912B5FE00EFE81B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947754502912B5FE00EFE81B /* WebService.swift */; };
 		947754532912B7B600EFE81B /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947754522912B7B600EFE81B /* Beer.swift */; };
 		94775456291398AA00EFE81B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 94775455291398AA00EFE81B /* Alamofire */; };
+		9477545929139B3B00EFE81B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9477545829139B3B00EFE81B /* Then */; };
+		9477545C29139B4600EFE81B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9477545B29139B4600EFE81B /* SnapKit */; };
+		9477545E29139E8E00EFE81B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9477545D29139E8E00EFE81B /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,7 @@
 		9477544E2912B32C00EFE81B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		947754502912B5FE00EFE81B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		947754522912B7B600EFE81B /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		9477545D29139E8E00EFE81B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9477545C29139B4600EFE81B /* SnapKit in Frameworks */,
 				94775456291398AA00EFE81B /* Alamofire in Frameworks */,
+				9477545929139B3B00EFE81B /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +114,7 @@
 				9477544E2912B32C00EFE81B /* main.swift */,
 				947754502912B5FE00EFE81B /* WebService.swift */,
 				947754522912B7B600EFE81B /* Beer.swift */,
+				9477545D29139E8E00EFE81B /* Observable.swift */,
 			);
 			path = Beer_MacOS;
 			sourceTree = "<group>";
@@ -147,6 +154,8 @@
 			name = Beer_MacOS;
 			packageProductDependencies = (
 				94775455291398AA00EFE81B /* Alamofire */,
+				9477545829139B3B00EFE81B /* Then */,
+				9477545B29139B4600EFE81B /* SnapKit */,
 			);
 			productName = Beer_MacOS;
 			productReference = 947754202912B2C100EFE81B /* Beer_MacOS.app */;
@@ -222,6 +231,8 @@
 			mainGroup = 947754172912B2C100EFE81B;
 			packageReferences = (
 				94775454291398AA00EFE81B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9477545729139B3B00EFE81B /* XCRemoteSwiftPackageReference "Then" */,
+				9477545A29139B4600EFE81B /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 947754212912B2C100EFE81B /* Products */;
 			projectDirPath = "";
@@ -268,6 +279,7 @@
 				947754242912B2C100EFE81B /* AppDelegate.swift in Sources */,
 				947754532912B7B600EFE81B /* Beer.swift in Sources */,
 				947754512912B5FE00EFE81B /* WebService.swift in Sources */,
+				9477545E29139E8E00EFE81B /* Observable.swift in Sources */,
 				9477544F2912B32C00EFE81B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +600,22 @@
 				kind = branch;
 			};
 		};
+		9477545729139B3B00EFE81B /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		9477545A29139B4600EFE81B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -595,6 +623,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 94775454291398AA00EFE81B /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		9477545829139B3B00EFE81B /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9477545729139B3B00EFE81B /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		9477545B29139B4600EFE81B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9477545A29139B4600EFE81B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

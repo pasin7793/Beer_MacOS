@@ -11,7 +11,7 @@ import Alamofire
 final class WebService{
     
     private let urlString = "https://api.punkapi.com/v2/beers/random"
-    private var beer: Beer!
+    var beer: Observable<Beer?> = Observable(nil)
 
     private let decoder = JSONDecoder()
     
@@ -21,7 +21,7 @@ final class WebService{
             switch response.result{
             case .success(let res):
                 guard let json = try? self.decoder.decode([Beer].self, from: res).first else { return }
-                self.beer = json
+                self.beer.value = json
                 print(json)
             
             case .failure(let err):
