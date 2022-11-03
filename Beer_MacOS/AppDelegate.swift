@@ -17,20 +17,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
         if let statusButton = statusItem.button{
-            statusButton.image = NSImage(systemSymbolName: "drop", accessibilityDescription: "drop")
+            statusButton.image = NSImage(systemSymbolName: "drop.fill", accessibilityDescription: "drop")
             statusButton.action = #selector(togglePopover)
         }
         self.popover = NSPopover()
-        self.popover.behavior = .transient
         self.popover.contentSize = NSSize(width: 400, height: 200)
+        self.popover.behavior = .transient
         self.popover.contentViewController = ViewController()
     }
     
     @objc func togglePopover(){
         if let button = statusItem.button{
             if popover.isShown{
-                self.popover.performClose(false)
-            }else{
+                self.popover.performClose(nil)
+            }else {
                 popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             }
         }
