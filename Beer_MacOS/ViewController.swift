@@ -8,6 +8,7 @@
 import Cocoa
 import SnapKit
 import Then
+import Kingfisher
 
 class ViewController: NSViewController {
 
@@ -16,20 +17,30 @@ class ViewController: NSViewController {
         $0.drawsBackground = false
         $0.isEditable = false
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.font = NSFont(name: "Helvetica", size: 9)
     }
+    
+    private let beerImageView = NSImageView()
     
     private let service = WebService()
     
     func addView(){
         view.addSubview(beerTextView)
+        view.addSubview(beerImageView)
     }
     
     func setLayout(){
         beerTextView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.top.equalTo(beerImageView.snp.bottom).offset(10)
             make.width.equalTo(400)
-            make.height.equalTo(60)
+            make.height.equalTo(200)
+        }
+        beerImageView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalTo(100)
+            make.height.equalTo(100)
+            make.top.equalTo(5)
         }
     }
     
@@ -54,6 +65,7 @@ class ViewController: NSViewController {
             guard let beer = beer else {return}
             DispatchQueue.main.async {
                 self?.beerTextView.string = beer.description
+                self?.beerImageView.kf.setImage(with: URL(string: beer.imageUrl))
             }
         }
     }
